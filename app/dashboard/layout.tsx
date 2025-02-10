@@ -1,18 +1,19 @@
+
+
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
 import { StarryBackground } from "@/components/starry-background";
-import "./globals.css";
+import { DashboardNav } from "@/components/dashboard-nav";
+import "../../styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "ShareHub - Your Personal Data Saver",
-  description: "Save and share your files securely with ShareHub",
+  title: "Dashboard - ShareHub",
+  description: "Manage your files and folders in the dashboard",
 };
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -22,10 +23,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system">
           <StarryBackground />
-          <div className="relative min-h-screen">
-            <Navbar /> {/* Home Navbar */}
-            <main className="container mx-auto px-4 py-8">{children}</main>
-            <Footer /> {/* Footer */}
+          <div className="flex min-h-screen">
+            <DashboardNav /> {/* Sidebar Navigation */}
+            <main className="flex-1 p-6">{children}</main>
           </div>
         </ThemeProvider>
       </body>
