@@ -60,9 +60,8 @@ Open a pull request.
 
 If you have any questions or need help, feel free to reach out:
 
-GitHub: Ali Dev
 
-LinkedIn: Ali Dev
+LinkedIn: [Ali Dev](https://www.linkedin.com/in/mirza-ali-dev/)
 
 © License
 
