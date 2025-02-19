@@ -1,15 +1,10 @@
-import { Inter } from "next/font/google";
+"use client";
 import { ThemeProvider } from "@/components/theme-provider";
 import { StarryBackground } from "@/components/starry-background";
 import { DashboardNav } from "@/components/dashboard-nav";
-import "../../styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+console.log("Using dashboard layout");
 
-export const metadata = {
-  title: "Dashboard - ShareHub",
-  description: "Manage your files and folders in the dashboard",
-};
 
 export default function DashboardLayout({
   children,
@@ -17,12 +12,11 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system">
-      {/* <StarryBackground /> */}
-      <div className="flex min-h-screen">
-        <DashboardNav /> {/* Sidebar Navigation */}
+  
+      <div className="flex ">
+        <DashboardNav />
         <main className="flex-1 p-6">{children}</main>
       </div>
-    </ThemeProvider>
+   
   );
 }
