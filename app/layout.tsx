@@ -5,7 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { StarryBackground } from "@/components/starry-background";
 import "./globals.css";
-import { usePathname } from "next/navigation"; // Import usePathname to detect the route
+import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
