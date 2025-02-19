@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button"; // Import button from shadcn
+import { ModeToggle } from "./mode-toggle";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -21,7 +22,7 @@ export function Navbar() {
   return (
     <nav className="border-b">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
+        <ModeToggle/>
         <Link href="/" className="text-2xl font-bold">
           ShareHub
         </Link>
