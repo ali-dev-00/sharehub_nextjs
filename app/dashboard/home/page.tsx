@@ -22,23 +22,21 @@ export default function Dashboard() {
   const suggestedFiles = [
     { id: 1, name: "Project Proposal", type: "pdf", size: "2.5 MB", modified: "2024-02-10" },
     { id: 2, name: "Design Assets", type: "folder", size: "156 MB", modified: "2024-02-09" },
-  ]
+  ];
 
   const recentFiles = [
     { id: 1, name: "Presentation.pptx", type: "pptx", size: "5.8 MB", modified: "2024-02-10" },
     { id: 2, name: "Budget.xlsx", type: "xlsx", size: "1.2 MB", modified: "2024-02-09" },
     { id: 3, name: "Report.pdf", type: "pdf", size: "3.4 MB", modified: "2024-02-08" },
-  ]
+  ];
 
   const starredFiles = [
     { id: 1, name: "Important Documents", type: "folder", size: "234 MB", modified: "2024-02-07" },
     { id: 2, name: "Contract.pdf", type: "pdf", size: "1.8 MB", modified: "2024-02-06" },
-  ]
-
-
+  ];
 
   return (
-    <main className="flex-1 p-6" ref={contentRef}>
+    <div ref={contentRef}>
       <div className="flex gap-4 mb-8">
         <Button className="flex items-center gap-2">
           <Upload className="w-4 h-4" />
@@ -99,6 +97,7 @@ export default function Dashboard() {
           <FileGrid files={starredFiles} />
         </TabsContent>
       </Tabs>
-    </main>
+    </div>
   );
 }
+  
