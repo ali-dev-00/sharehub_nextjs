@@ -29,7 +29,7 @@ export default function RootLayout({
           <div className="relative min-h-screen">
             {isDashboard ? children : <main className="container mx-auto px-4 py-8">{children}</main>}
           </div>
-          <Footer />
+          <Footer className={isDashboard ? "border-t !mt-0" : ""} />
         </ThemeProvider>
       </body>
     </html>

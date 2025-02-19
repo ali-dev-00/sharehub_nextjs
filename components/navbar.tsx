@@ -22,7 +22,7 @@ export function Navbar() {
   return (
     <nav className="border-b">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <ModeToggle/>
+        {/* <ModeToggle/> */}
         <Link href="/" className="text-2xl font-bold">
           ShareHub
         </Link>
